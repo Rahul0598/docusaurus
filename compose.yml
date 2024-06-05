@@ -1,0 +1,12 @@
+name: docusaurus
+
+services:
+  docs:
+    image: node:21-alpine
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./:/app:z
+    working_dir: /app
+    command: ["yarn", "start"]
+
